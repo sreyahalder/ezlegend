@@ -32,6 +32,13 @@
             ctx.clearRect(0, 0, canvas.width, canvas.height);
             x = x + 10;
             y = y + 10;
+            if (x > canvas.width) {
+                x = -x
+            }
+
+            if (y > canvas.height) {
+                y = -y
+            }
             ctx.beginPath();
             ctx.arc(x, y, 50, 0, 2*Math.PI);
             ctx.stroke();
